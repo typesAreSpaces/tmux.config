@@ -19,6 +19,7 @@ function _time() {
 }
 
 function main() {
+  check_email
   _date
   _time
 }
