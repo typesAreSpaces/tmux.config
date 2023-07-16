@@ -1,8 +1,8 @@
 #!/bin/sh
 
 export NUM=0;
-for session in $(/opt/homebrew/bin/tmux ls \
-  | egrep '^[0-9]+:' \
+for session in $(tmux ls \
+  | grep -E '^[0-9]+:' \
   | awk '{ print substr($1,1,length($1)-1) }' \
   | sort -g)
 do
