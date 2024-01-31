@@ -45,20 +45,35 @@ tokyoTheme(){
   FG_BELL="colour235"
 }
 
+doomOneTheme(){
+  BG1="#282c34"
+  FG1="white"
+  FG_LEFT="#1b2229"
+  BG_LEFT="#bbc2cf"
+  ALERT="#ff6c6b"
+  FG_RIGHT1="#bbc2cf"
+  FG_RIGHT2="#51afef"
+  FG_RIGHT3="#bbc2cf"
+  BG_LINE="#424858"
+  FG_CURRENT="#51afef"
+  FG_ACTIVITY="#9f97dd"
+  FG_BELL="white"
+}
+
 setColor(){
-  sed -i "s/BG1/$BG1/g" $TMUX_PATH/$1
-  sed -i "s/BG1/$BG1/g" $TMUX_PATH/$1
-  sed -i "s/FG1/$FG1/g" $TMUX_PATH/$1
-  sed -i "s/FG_LEFT/$FG_LEFT/g" $TMUX_PATH/$1
-  sed -i "s/BG_LEFT/$BG_LEFT/g" $TMUX_PATH/$1
-  sed -i "s/ALERT/$ALERT/g" $TMUX_PATH/$1
-  sed -i "s/FG_RIGHT1/$FG_RIGHT1/g" $TMUX_PATH/$1
-  sed -i "s/FG_RIGHT2/$FG_RIGHT2/g" $TMUX_PATH/$1
-  sed -i "s/FG_RIGHT3/$FG_RIGHT3/g" $TMUX_PATH/$1
-  sed -i "s/BG_LINE/$BG_LINE/g" $TMUX_PATH/$1
-  sed -i "s/FG_CURRENT/$FG_CURRENT/g" $TMUX_PATH/$1
-  sed -i "s/FG_ACTIVITY/$FG_ACTIVITY/g" $TMUX_PATH/$1
-  sed -i "s/FG_BELL/$FG_BELL/g" $TMUX_PATH/$1
+  gsed -i "s/BG1/$BG1/g" $TMUX_PATH/$1
+  gsed -i "s/BG1/$BG1/g" $TMUX_PATH/$1
+  gsed -i "s/FG1/$FG1/g" $TMUX_PATH/$1
+  gsed -i "s/FG_LEFT/$FG_LEFT/g" $TMUX_PATH/$1
+  gsed -i "s/BG_LEFT/$BG_LEFT/g" $TMUX_PATH/$1
+  gsed -i "s/ALERT/$ALERT/g" $TMUX_PATH/$1
+  gsed -i "s/FG_RIGHT1/$FG_RIGHT1/g" $TMUX_PATH/$1
+  gsed -i "s/FG_RIGHT2/$FG_RIGHT2/g" $TMUX_PATH/$1
+  gsed -i "s/FG_RIGHT3/$FG_RIGHT3/g" $TMUX_PATH/$1
+  gsed -i "s/BG_LINE/$BG_LINE/g" $TMUX_PATH/$1
+  gsed -i "s/FG_CURRENT/$FG_CURRENT/g" $TMUX_PATH/$1
+  gsed -i "s/FG_ACTIVITY/$FG_ACTIVITY/g" $TMUX_PATH/$1
+  gsed -i "s/FG_BELL/$FG_BELL/g" $TMUX_PATH/$1
 }
 
 setTheme(){
@@ -79,6 +94,9 @@ case $1 in
     ;;
   "tokyo")
     tokyoTheme
+    ;;
+  "doomone")
+    doomOneTheme
     ;;
 esac
 
