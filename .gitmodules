@@ -1,0 +1,3 @@
+[submodule "scripts/tmux-resurrect"]
+	path = scripts/tmux-resurrect
+	url = git@github.com:typesAreSpaces/tmux-resurrect.git
