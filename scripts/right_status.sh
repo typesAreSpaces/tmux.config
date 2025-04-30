@@ -20,6 +20,7 @@ function _time() {
 
 function main() {
   #check_email
+  ~/.config/tmux/scripts/tmux-power/scripts/display_power.sh
   _date
   _time
 }
